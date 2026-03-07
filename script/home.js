@@ -15,13 +15,13 @@ const displayIssues = (issues) =>{
     cardContainer.innerHTML = "";
 
     issues.forEach(issue =>{
-        console.log(issue);
+        // console.log(issue);
         const card = document.createElement("div");
         card.innerHTML = `
-            <div class="bg-white space-y-4 rounded-2xl p-5">
+            <div class="bg-white space-y-4 rounded-2xl p-5 border-t-4 ${issue.priority.toUpperCase() === 'LOW' ? "border-[#A855F7]" : "border-[#00A96E]"}">
                 <div class="flex justify-between items-center">
-                    <img src="assets/Open-Status.png" alt="">
-                    <p>${issue.priority.toUpperCase()}</p>
+                    <img src="${issue.priority.toUpperCase() === 'LOW' ? "assets/Closed- Status .png" : 'assets/Open-Status.png'}" alt="">
+                    <p class="px-3 rounded-xl ${issue.priority.toUpperCase() === 'HIGH' ? "text-red-400 bg-red-100" : issue.priority.toUpperCase() === 'LOW' ? "text-gray-500 bg-gray-200":" text-yellow-500 bg-yellow-100"}  ">${issue.priority.toUpperCase()}</p>
                 </div>
                 <div class="space-y-2">
                     <h2 class="text-xl font-semibold dark-blue">${issue.title}</h2>
