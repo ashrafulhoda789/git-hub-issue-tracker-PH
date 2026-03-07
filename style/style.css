@@ -5,3 +5,11 @@
 .dark-blue{
     color: #1F2937;
 }
+
+.list-status .open::marker{
+    color: #00A96E;
+}
+
+.list-status .closed::marker{
+    color: #A855F7;
+}

@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Issue Tracker | Home</title>
+    <title>Git Hub Issue Tracker | Login</title>
+
+    <!-- Tailwind + daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font integrate -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/style.css">
+
 </head>
-<body>
-    <h1>Home Page</h1>
+<body class="bg-gray-100 min-h-screen">
+    
+    <header>
+        <div class="navbar bg-base-100 shadow-sm">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl">GitHub Issue Tracker</a>
+            </div>
+            <div class="flex gap-2 items-center">
+                <input type="text" placeholder=" Issues" class="input input-bordered w-24 md:w-auto" />
+                <button class="btn btn-primary">
+                    <i class="fa-solid fa-plus"></i>New Issue</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="w-11/12 mx-auto my-20 space-y-5">
+        <div class="bg-white p-5 rounded-lg">
+            <button id="allBtn" class="btn btn-primary">All</button>
+            <button id="openBtn" class="btn">Open</button>
+            <button id="closeBtn" class="btn">Closed</button>
+        </div>
+        <div class="shadow space-y-4 rounded-lg">
+            <div class="bg-white p-5 rounded-t-lg border-b border-gray-300">
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-3 items-center">
+                        <div>
+                            <img src="assets/Aperture.png" alt="">
+                        </div>
+                        <div>
+                            <h2 id="totalIssues" class="text-xl font-semibold dark-blue">50 Issues</h2>
+                            <p class="text-[#64748B]">Track and manage your project issues</p>
+                        </div>
+                    </div>
+                    <div class="list-status flex gap-10">
+                        <li class="open">Open</li>
+                        <li class="closed">Closed</li>
+                    </div>
+                </div>
+            </div>
+            <div class="grid gap-5 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4">
+                <div class="bg-white space-y-4 rounded-2xl p-5">
+                    <div class="flex justify-between items-center">
+                        <img src="assets/Open-Status.png" alt="">
+                        <p>HIGH</p>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-xl font-semibold dark-blue">Fix navigation menu on mobile devices</h2>
+                        <p class="line-clamp-2 font-medium text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices...</p>
+                    </div>
+                    <div>
+                        <button class="btn rounded-full">BUG</button>
+                        <button class="btn rounded-full">HELP WANTED</button>
+                    </div>
+                    <hr class="border-gray-200">
+                    <div>
+                        <p class="text-[#64748B]">#1 by john Doe</p>
+                        <p class="text-[#64748B]">1/15/2024</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 </body>
 </html>
