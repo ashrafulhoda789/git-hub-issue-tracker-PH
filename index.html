@@ -15,9 +15,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="flex justify-center items-center min-h-screen bg-gray-200">
     
+    <section class="max-w-lg m-auto pt-10 bg-white shadow-2xl rounded-3xl">
+        <div class="w-[420px] mx-auto space-y-5 text-center flex justify-center flex-col items-center">
+            <div>
+                <img src="assets/github-logo.png" alt="">
+            </div>
+            <div class="space-y-2">
+                <h2 class="text-2xl font-semibold dark-blue">GitHub Issues Tracker</h2>
+                <p class="text-[#64748B]">Sign in to manage your issues</p>
+            </div>
+        </div>
 
+        <div class="form pt-4">
+            <div class="card w-[420px]  mx-auto">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="label text-neutral font-semibold text-[16px]">Username</label>
+                        <input id="input-username" type="text" class="input w-full bg-base-200" placeholder="Enter Username" />
+                        <p class="mb-3">Default: admin</p>        
+
+                        <label class="label text-[16px] text-neutral font-semibold">Password</label>
+                        <input id="input-passwrod" minlength="4" type="password" class="input w-full bg-base-200" placeholder="Enter Password" />
+                        <p>Default: admin123</p>
+                        <div></div>
+                        <button id="login-btn" class="btn btn-primary mt-4">Login</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+    </section>
     
 </body>
 </html>
