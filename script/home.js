@@ -5,8 +5,20 @@ const createElement = (arr) =>{
     return htmlElement.join(" ");
 }
 
+const loadSpinner = (status) =>{
+    if(status === true){
+        document.getElementById("spinner").classList.remove("hidden");
+        document.getElementById("cardContainer").classList.add("hidden");
+    }
+    else{
+        document.getElementById("spinner").classList.add("hidden");
+        document.getElementById("cardContainer").classList.remove("hidden");
+    }
+}
+
 
 const loadAllIssues = async() =>{
+    loadSpinner(true);
     const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues");
     const data = await res.json();
     // console.log(data.data);
@@ -58,6 +70,11 @@ const displayIssues = (issues) =>{
     const cardContainer = document.getElementById("cardContainer");
     cardContainer.innerHTML = "";
 
+    if(issues.length === 0){
+        loadSpinner(false);
+        return;
+    }
+
     const totalIssues = document.getElementById("totalIssues");
     totalIssues.innerText = issues.length + " Issues";
 
@@ -85,7 +102,8 @@ const displayIssues = (issues) =>{
             </div>
         `;
         cardContainer.appendChild(card);
-    })
+    });
+    loadSpinner(false);
 };
 
 loadAllIssues();
