@@ -1,13 +1,13 @@
 ## Question-1:
-  #var
+  ### var
     - Function scoped
     - can be reassign
     - can be redeclare
-  #let
+ ### let
     - Block scoped
     - can be reassign
     - cannot be reassign
-  #const
+ ### const
     - Block scoped
     - cannot be reassign
     - cannot be redeclare
