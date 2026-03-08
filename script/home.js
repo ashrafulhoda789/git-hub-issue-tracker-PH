@@ -126,13 +126,13 @@ const displayIssues = (issues) =>{
         // console.log(issue);
         const card = document.createElement("div");
         card.innerHTML = `
-            <div onclick="loadIssuesDetails(${issue.id})" class="bg-white space-y-4 rounded-2xl p-5 border-t-4 ${issue.status.toUpperCase() === 'CLOSED' ? "border-[#A855F7]" : "border-[#00A96E]"}">
+            <div onclick="loadIssuesDetails(${issue.id})" class="bg-white space-y-4 rounded-2xl h-[320px] p-5 border-t-4 ${issue.status.toUpperCase() === 'CLOSED' ? "border-[#A855F7]" : "border-[#00A96E]"}">
                 <div class="flex justify-between items-center">
                     <img src="${issue.status.toUpperCase() === 'CLOSED' ? "assets/Closed- Status .png" : 'assets/Open-Status.png'}" alt="">
                     <p class="px-3 rounded-xl ${issue.priority.toUpperCase() === 'HIGH' ? "text-red-400 bg-red-100" : issue.priority.toUpperCase() === 'LOW' ? "text-gray-500 bg-gray-200":" text-yellow-500 bg-yellow-100"}  ">${issue.priority.toUpperCase()}</p>
                 </div>
                 <div class="space-y-2">
-                    <h2 class="text-xl font-semibold dark-blue">${issue.title}</h2>
+                    <h2 class="md:line-clamp-1 text-xl font-semibold dark-blue">${issue.title}</h2>
                     <p class="line-clamp-1 font-medium text-[#64748B]">${issue.description}</p>
                 </div>
                 <div class="flex flex-col lg:flex-row gap-2">

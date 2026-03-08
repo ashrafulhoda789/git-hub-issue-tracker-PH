@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Hub Issue Tracker | Login</title>
+    <title>GitHub Issue Tracker | Login</title>
 
     <!-- Tailwind + daisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -23,9 +23,10 @@
 <body class="bg-gray-100 min-h-screen">
     
     <header>
-        <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar bg-base-100 shadow-sm px-2 md:px-10">
             <div class="flex-1">
-                <a class="btn btn-ghost text-xl">GitHub Issue Tracker</a>
+                <!-- <a class="btn btn-ghost text-xl">GitHub Issue Tracker</a> -->
+                 <img class="w-[50px]" src="assets/github-logo.png" alt="">
             </div>
             <div class="flex gap-2 items-center">
                 <div class="join">
@@ -68,7 +69,7 @@
             <section id="spinner" class="flex justify-center items-center py-10 hidden">
                 <span class="loading loading-bars loading-xl"></span>
             </section>
-            <div id="cardContainer" class="grid gap-5 grid-cols-1 md:grid-cols-3 p-4">
+            <div id="cardContainer" class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4">
                 <!-- <div class="bg-white space-y-4 rounded-2xl p-5">
                     <div class="flex justify-between items-center">
                         <img src="assets/Open-Status.png" alt="">
