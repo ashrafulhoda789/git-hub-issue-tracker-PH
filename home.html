@@ -28,9 +28,14 @@
                 <a class="btn btn-ghost text-xl">GitHub Issue Tracker</a>
             </div>
             <div class="flex gap-2 items-center">
-                <input type="text" placeholder=" Issues" class="input input-bordered w-24 md:w-auto" />
-                <button class="btn btn-primary">
-                    <i class="fa-solid fa-plus"></i>New Issue</button>
+                <div class="join">
+                    <div>
+                        <label class="input validator join-item">
+                        <input type="text" placeholder="Search Issues" />
+                        </label>
+                    </div>
+                    <button class="btn btn-primary ">Search</button>
+                </div>
             </div>
         </div>
     </header>
@@ -49,7 +54,7 @@
                             <img src="assets/Aperture.png" alt="">
                         </div>
                         <div>
-                            <h2 id="totalIssues" class="text-xl font-semibold dark-blue">50 Issues</h2>
+                            <h2 id="totalIssues" class="text-xl font-semibold dark-blue"></h2>
                             <p class="text-[#64748B]">Track and manage your project issues</p>
                         </div>
                     </div>
