@@ -165,5 +165,13 @@ document.getElementById("searchBtn").addEventListener('click',
             
             displayIssues(allIssues);
         })
+
+        const buttons = document.querySelectorAll("#btnContainer button");
+
+        buttons.forEach(btn =>{
+            btn.classList.remove("btn-primary");
+        })
+
+        document.getElementById("allBtn").classList.add("btn-primary");
     }
 );
