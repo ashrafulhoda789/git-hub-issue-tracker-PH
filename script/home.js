@@ -26,7 +26,6 @@ const loadAllIssues = async() =>{
     // console.log(data.data);
     allIssues = data.data;
     displayIssues(allIssues);
-
 }
 
 const allBtn = document.getElementById("allBtn");
@@ -72,10 +71,11 @@ const loadIssuesDetails = async(id) =>{
 
     const data = await res.json();
     displayModal(data.data);
+    
 }
 
 const displayModal = (issue) =>{
-    console.log(issue);
+    // console.log(issue);
     const detailsBox = document.getElementById("details-container");
     detailsBox.innerHTML = `
         <div class="space-y-5">
@@ -97,7 +97,7 @@ const displayModal = (issue) =>{
             <div class="flex justify-between items-center px-5 py-2 bg-gray-100 rounded-lg">
                 <div>
                     <h2 class="text-[#64748B]">Assignee:</h2>
-                    <h2 class="dark-blue font-semibold">${issue.assignee}</h2>
+                    <h2 class="dark-blue font-semibold">${issue.assignee != "" ? issue.assignee : "Not assignee"}</h2>
                 </div>
                 <div class="flex flex-col justify-center">
                     <h2 class="text-[#64748B]">Priority:</h2>
@@ -135,7 +135,7 @@ const displayIssues = (issues) =>{
                     <h2 class="text-xl font-semibold dark-blue">${issue.title}</h2>
                     <p class="line-clamp-1 font-medium text-[#64748B]">${issue.description}</p>
                 </div>
-                <div>
+                <div class="flex flex-col lg:flex-row gap-2">
                     ${createElement(issue.labels)}
                 </div>
                 <hr class="border-gray-200">
